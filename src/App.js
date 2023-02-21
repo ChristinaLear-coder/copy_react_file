@@ -1,24 +1,25 @@
 import logo from "./logo.svg";
 import "./App.css";
-
-export default function App() {
+import "./Weather.js";
+import Search from "./Search";
+function App() {
   return (
     <div className="App">
-      <div className="container">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
         <h1>
-          <img src={logo} className="App-logo" alt="logo" />
+          {" "}
+          <Search />
         </h1>
-        <h2> React Weather App</h2>
-        <h3>Weather Search Box</h3>
-
-        <footer>
-          Coded by Christina Lear,{" "}
-          <a href="" target="_blank">
-            {" "}
-            open-sourced on GitHub and deployed by Netlify.
-          </a>
-        </footer>
-      </div>
+        <Weather city="London" />
+        <p> Coded by Lear Christina</p>
+        <p>Coded by Lear Christina </p>
+        <a href="https://github.com/ChristinaLear-coder/React_app">
+          {" "}
+          Open coded source
+        </a>
+      </header>
     </div>
   );
 }
+export default App;
